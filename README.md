@@ -16,7 +16,7 @@ A Cloudflare Email Worker that lets you reply to emails from a privacy alias (e.
 ### 1. Clone and install
 
 ```bash
-git clone https://github.com/your-username/cf-smtp-reply-proxy
+git clone https://github.com/JamesCullum/cf-smtp-reply-proxy
 cd cf-smtp-reply-proxy
 npm install
 ```
