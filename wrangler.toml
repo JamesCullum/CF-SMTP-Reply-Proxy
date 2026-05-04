@@ -1,0 +1,27 @@
+name = "cf-smtp-reply-proxy"
+main = "index.js"
+
+compatibility_date = "2025-05-03"
+compatibility_flags = ["nodejs_compat"]
+
+workers_dev = false
+preview_urls = false
+
+[observability]
+enabled = true
+head_sampling_rate = 1
+
+[vars]
+SMTP_HOST    = "smtp.example.com"
+SMTP_PORT    = "587"
+SMTP_USER    = "you@example.com"
+SMTP_AUTH    = "login"          # plain | login | cram-md5
+FROM_NAME    = "Your Name"
+FROM_EMAIL   = "you@example.com"
+
+# Address to rewrite in outgoing body (your inbound alias)
+REWRITE_FROM = "your-alias@privacy.example"
+REWRITE_TO   = "you@example.com"
+
+# Optional: comma-separated list of CC addresses (leave empty to disable)
+CC_ADDRESSES = ""
